@@ -43,4 +43,7 @@ chef-soloでプロビジョニング
 http://dev.classmethod.jp/cloud/use_chef-solo-provisioner_to_make_ami_by_packer/
 
 
+    
+    time packer build -var 'aws_access_key=...' -var 'aws_secret_key=...' ubuntu-chef-solo.json
+    
 
