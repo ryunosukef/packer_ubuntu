@@ -12,17 +12,11 @@ Packerを使用すれば、設定ファイル(後述のTemplate)をGitなどのV
 
 準備するもの
 -------------
-- AWSのアクセスキーとシークレットキー
-AWSのコンソール画面のアカウント
-My Account
-セキュリティ証明書
-アクセスキー
+- AWSのアクセスキーとシークレットキーを、[AWSのMy Account => セキュリティ証明書 画面](https://portal.aws.amazon.com/gp/aws/securityCredentials)で、確認する
 
-- AMI ID
-AWSのコンソール画面より、選択可能なAMI IDを確認する
-https://console.aws.amazon.com/ec2/v2/home?region=ap-northeast-1#LaunchInstanceWizard:
+- AMI IDを[AWSのLaunchInstanceWizard](https://console.aws.amazon.com/ec2/v2/home?region=ap-northeast-1#LaunchInstanceWizard)で、確認する
 
-ex.)
+-- ex.)
 `Ubuntu Server 13.10 - ami-b945ddb8 (64-bit) / ami-ad45ddac (32-bit)`
 
 
@@ -37,6 +31,7 @@ http://dev.classmethod.jp/cloud/packer-tips-for-ci-tools/
     time packer build -var 'aws_access_key=...' -var 'aws_secret_key=...' ubuntu-key-valiables.json
     
 
+3分から5分くらいでできあがる
 
 chef-soloでプロビジョニング
 -------------
@@ -46,4 +41,6 @@ http://dev.classmethod.jp/cloud/use_chef-solo-provisioner_to_make_ami_by_packer/
     
     time packer build -var 'aws_access_key=...' -var 'aws_secret_key=...' ubuntu-chef-solo.json
     
+    
+3分から5分くらいでできあがる
 
